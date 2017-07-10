@@ -68,6 +68,7 @@ PART TWO:
 
 # PART ONE
 
+
 # 1. Write a function called 'hello_world' that does not take any arguments and
 #    prints "Hello World".
 
@@ -107,7 +108,8 @@ def repeat_string(word, number):
 #    If the integer is zero, print "Zero".
 
 def print_sign(number):
-    """Takes a number and prints if the number is higher, lower, or equal to 0"""
+    """Takes a number and prints if the number is higher, lower, or equal to 0.
+    """
     number = int(number)
     if number > 0:
         print "Higher than 0"
@@ -122,21 +124,37 @@ def print_sign(number):
 #    evenly divisible by 3.
 
 def is_divisible_by_three(number):
+    """Takes a number and determines if it is evenly divisble by 3."""
     if number % 3 == 0:
         return True
     else:
         return False
 
 
-
 # 7. Write a function called 'num_spaces' that takes a sentence as one string
 #    and returns the number of spaces.
+
+def num_spaces(sentence):
+    """Takes a sentence and determines how many spaces it contains."""
+    number_of_spaces = 0
+    for character in sentence:
+        if character == " ":
+            number_of_spaces += 1
+    return number_of_spaces
 
 
 # 8. Write a function called 'total_meal_price' that can be passed a meal price
 #    and a tip percentage. It should return the total amount paid
 #    (price + price * tip). **However:** passing in the tip percentage should
 #    be optional; if not given, it should default to 15%.
+
+def total_meal_price(price, tip=0.15):
+    """Takes a price and tip and determines total amount of the two together.
+    If no tip is entered, default to 15 %.
+    """
+    tip_amount = price * tip
+    total_amount = price + tip_amount
+    return total_amount
 
 
 # 9. Write a function called 'sign_and_parity' that takes an integer as an
@@ -147,6 +165,29 @@ def is_divisible_by_three(number):
 #    Then, write code that shows the calling of this function on a number and
 #    unpack what is returned into two variables --- sign and parity (whether
 #    it's even or odd). Print sign and parity.
+
+def sign_and_parity(number):
+    """Takes a number and determines if it is even or odd, positive or negative
+    and prints a list of its too traits.
+    """
+
+    even_or_odd = ""
+    postive_or_negative = ""
+
+    if number % 2 == 0:
+        even_or_odd = "Even"
+    else:
+        even_or_odd = "Odd"
+
+    if number > 0:
+        postive_or_negative = "Positive"
+    elif number < 0:
+        postive_or_negative = "Negative"
+    else:
+        postive_or_negative = "Zero"
+
+    sign_and_parity = postive_or_negative, even_or_odd
+    print list(sign_and_parity)
 
 
 ###############################################################################
