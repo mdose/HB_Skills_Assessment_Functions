@@ -74,6 +74,7 @@ PART TWO:
 
 def hello_world():
     """Takes no agruements and prints 'Hello World'"""
+
     print "Hello World"
 
 
@@ -82,6 +83,7 @@ def hello_world():
 
 def say_hi(name):
     """Takes in a name as an argument and prints 'Hi' followed by the name"""
+
     print "Hi {}".format(name)
 
 
@@ -91,6 +93,7 @@ def say_hi(name):
 def print_product(num1, num2):
     """Takes two integer agruements, multiplies them together, and prints the
     result"""
+
     print num1 * num2
 
 
@@ -100,6 +103,7 @@ def print_product(num1, num2):
 def repeat_string(word, number):
     """Takes a string and an interger agruement and prints the string that many
     times."""
+
     print word * number
 
 
@@ -110,6 +114,7 @@ def repeat_string(word, number):
 def print_sign(number):
     """Takes a number and prints if the number is higher, lower, or equal to 0.
     """
+
     number = int(number)
     if number > 0:
         print "Higher than 0"
@@ -125,6 +130,7 @@ def print_sign(number):
 
 def is_divisible_by_three(number):
     """Takes a number and determines if it is evenly divisble by 3."""
+
     if number % 3 == 0:
         return True
     else:
@@ -136,6 +142,7 @@ def is_divisible_by_three(number):
 
 def num_spaces(sentence):
     """Takes a sentence and determines how many spaces it contains."""
+
     number_of_spaces = 0
     for character in sentence:
         if character == " ":
@@ -152,6 +159,7 @@ def total_meal_price(price, tip=0.15):
     """Takes a price and tip and determines total amount of the two together.
     If no tip is entered, default to 15 %.
     """
+
     tip_amount = price * tip
     total_amount = price + tip_amount
     return total_amount
@@ -198,6 +206,11 @@ def sign_and_parity(number):
 #    it so the job title defaults to "Engineer" if a job title is not passed
 #    in. Return the person's title and name in one string.
 
+def full_title(name, title="Engineer"):
+    """Takes a name and title and returns the title and name in one string."""
+
+    return title + " " + name
+
 # 2. Given a recipient name & job title and a sender name, print the following
 #    letter:
 #
@@ -206,6 +219,15 @@ def sign_and_parity(number):
 #
 #    Use the function from #1 to construct the full title for the letter's
 #    greeting.
+
+
+def write_letter(recipient_name, recipient_title, sender_name):
+    """Takes in a recipent name and title as well as a sender's name and prints
+    out a letter"""
+
+    full_recipient_info = full_title(recipient_name, recipient_title)
+    print "Dear {}, I think you are amazing! Sincerely, {}".format(full_recipient_info, sender_name)
+
 
 
 ###############################################################################
