@@ -71,27 +71,35 @@ PART TWO:
 # 1. Write a function called 'hello_world' that does not take any arguments and
 #    prints "Hello World".
 
-
 def hello_world():
-    """A func that takes no agruements and prints 'Hello World'"""
+    """Takes no agruements and prints 'Hello World'"""
     print "Hello World"
 
 
 # 2. Write a function called 'say_hi' that takes a name as a string and
 #    prints "Hi" followed by the name.
 
-
 def say_hi(name):
-    """A func that takes in a name as an argument and prints 'Hi' followed by a
-    name"""
+    """Takes in a name as an argument and prints 'Hi' followed by the name"""
     print "Hi {}".format(name)
+
 
 # 3. Write a function called 'print_product' that takes two integers and
 #    multiplies them together. Print the result.
 
+def print_product(num1, num2):
+    """Takes two integer agruements, multiplies them together, and prints the
+    result"""
+    print num1 * num2
+
 
 # 4. Write a function called 'repeat_string' that takes a string and an integer
 #    and prints the string that many times
+
+def repeat_string(word, number):
+    """Takes a string and an interger agruement and prints the string that many
+    times."""
+    print word * number
 
 
 # 5. Write a function called 'print_sign' that takes an integer and prints
