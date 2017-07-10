@@ -106,10 +106,27 @@ def repeat_string(word, number):
 #    "Higher than 0" if higher than zero and "Lower than 0" if lower than zero.
 #    If the integer is zero, print "Zero".
 
+def print_sign(number):
+    """Takes a number and prints if the number is higher, lower, or equal to 0"""
+    number = int(number)
+    if number > 0:
+        print "Higher than 0"
+    elif number < 0:
+        print "Lower than 0"
+    else:
+        print "Zero"
+
 
 # 6. Write a function called 'is_divisible_by_three' that takes an integer and
 #    returns a boolean (True or False), depending on whether the number is
 #    evenly divisible by 3.
+
+def is_divisible_by_three(number):
+    if number % 3 == 0:
+        return True
+    else:
+        return False
+
 
 
 # 7. Write a function called 'num_spaces' that takes a sentence as one string
